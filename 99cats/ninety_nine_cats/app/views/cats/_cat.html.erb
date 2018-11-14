@@ -48,3 +48,12 @@
   </tbody>
 </table>
 
+Requests:
+<% CatRentalRequest.where(cat_id: cat.id).order(start_date: :asc).each do |request| %>
+  <li>
+    <%= request.start_date %> to <%= request.end_date %>
+  </li>
+<% end %>
+
+
+

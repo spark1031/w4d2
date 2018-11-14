@@ -15,6 +15,6 @@ class CatRentalRequestsController < ApplicationController
   
   private
   def request_params
-    params.require(:request).permit(:cat_id, :start_date, :end_date)
+    params.require(:request).permit(:cat_id, :start_date, :end_date, :status)
   end
 end

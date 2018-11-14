@@ -13,3 +13,50 @@
  *= require_tree .
  *= require_self
  */
+body {
+  background: url('https://www.wallpaperflare.com/static/885/569/289/simple-background-dan-burgess-minimalism-artwork-wallpaper.jpg');
+  background-size: cover;
+  font-family: 'Pacifico', cursive;
+  border: 1px solid black;
+  margin: 10px;
+  height: 100%;
+}
+
+h1 {
+  font-size: 1.5em;
+  order: 1;
+  text-align: center;
+}
+
+li {
+  display: flex;
+  list-style: none;
+}
+
+td {
+    border: 1px solid #333;
+}
+
+a {
+  text-decoration: none;
+  font-size: 9px;
+  text-align: center;
+  letter-spacing: 1.2px;
+  text-decoration: none;
+  color: #333333;
+  padding: 2px 6px 2px 6px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+  
+  margin-left: 6px;
+  margin-top: 6px;
+  height: 10px;
+  font-family: 'Roboto', sans-serif;
+}
+
+a:hover {
+  background-color: khaki;
+  color: gray;
+}

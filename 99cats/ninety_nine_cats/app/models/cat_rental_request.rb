@@ -35,6 +35,24 @@ class CatRentalRequest < ApplicationRecord
     end
   end
   
+  def overlapping_pending_requests
+    requests = CatRentalRequest.where(cat_id: self.cat_id)
+    return false if requests.nil?
+    pending_requests = requests.where(status: 'PENDING')
+  end
+  
+  def approve!
+    self.status = 'APPROVED'
+    self.update
+    pending_overlappers = self.overlapping_pending_requests
+    pending_overlappers.map { |overlapper| overlapper.status = 'DENIED' }  
+  end
+  
+  def deny!
+    self.status = 'DENIED'
+    self.update
+  end
+  
   belongs_to :cat,
     foreign_key: :cat_id,
     class_name: 'Cat'
